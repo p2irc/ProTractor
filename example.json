@@ -1,0 +1,10 @@
+{
+  "input_directory": "PATH_TO_IMAGES",
+  "desination_directory": "PATH_TO_DESTINATION",
+  "camera_height": "1",
+  "camera_field_of_view": 53.5,
+  "cam_vertical_resolution": 4000,
+  "row_spacing": 0.52,
+  "img_extension": "JPG",
+  "contains_static_objects": "False"
+}
