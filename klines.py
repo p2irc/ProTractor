@@ -315,7 +315,6 @@ def fit_k_lines_to_data(data, k, min_line_distance, size, verbose_plot=False):
         plt.subplots_adjust(top=1)
         plt.subplots_adjust(right=1)
         plt.subplots_adjust(left=0)
-        #plt.savefig("/home/josh/for_nico/initial.png")
         plt.show()
 
     i = 1

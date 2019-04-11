@@ -579,7 +579,7 @@ class CropRowsFromImg(object):
         print("    True")
         return True
 
-    def find_initial_lines(self, logging=False):
+    def find_initial_lines(self):
         """Currently written to start on the second image such that the homography matrix is done pairwise from the
         second image on as cur / previous comparison."""
 
@@ -633,13 +633,6 @@ class CropRowsFromImg(object):
                     self.list_of_lines[-1 - i][1].append(cur_img.path)
 
                 print("CURRENT NUMBER OF DETECTED ROWS", len(self.list_of_lines))
-
-            if logging:
-                # Dump the list of lines per iteration of the algorithm
-                pickle.dump(self.list_of_lines, open("/home/josh/pickeld_objects/list_of_lines/rows.p", "wb"))
-                # Dump the current image's path and homography matrix that relates it to the first image.
-                pickle.dump(((cur_img.path, homography_prev_to_cur, homography_prev_to_cur)),
-                            open("/home/josh/pickeld_objects/list_of_transformed_images/homographys.p", "wb"))
 
     def straighten_rows(self, img_arr, lines, height):
         """Straightens an image based on the given regression/centering line to the desired height."""
